@@ -1,0 +1,95 @@
+body {
+	background-color: #722F37;
+	overflow: hidden !important;
+}
+
+body, html {height:100%;}
+
+nav {
+	position: fixed;
+	top:0;
+	z-index: 1;
+	width:100%;
+}
+
+#fullpage {
+	overflow: hidden;
+}
+
+.slide {
+	background: #722F37 no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.start {
+		transition: background-image 2s ease;
+	}
+}
+
+.persona-wrapper {
+	padding: 0px 20px;
+	overflow-y: auto;
+	height: 99%;
+}
+
+.persona {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.section {
+	height:100%;
+	transition: opacity 1s ease;
+	opacity: 0;
+	display: block;
+	overflow: hidden;
+
+	.slides {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+.front, .back {
+	height:100%;
+	top: 0;
+	width:100%;
+	display:none;
+}
+
+.active-side {
+	display: table;
+	padding-top: 50px;
+}
+
+.return, .flip {
+	position: relative;
+}
+
+.postcard-controls {
+	position: relative;
+	bottom:5%;
+	left:5%;
+}
+
+.backtext {
+	position: relative;
+	height:75%;
+	width:70%;
+	margin-left: auto;
+	margin-right: auto;
+	color:#fff;
+	overflow-y: scroll;
+	background-color: rgba(51,51,51,0.3);
+	padding:10px;
+	border-radius: 5px;
+}
+
+.avatars {
+	position: absolute;
+	top:20%;
+	left:20px;
+}

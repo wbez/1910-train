@@ -12,14 +12,12 @@
     <!-- META TAGS -->
     {% include '_meta.html' %}
 
-    <!-- FONTS -->
-    {% include '_fonts.html' %}
-
     <!-- CSS -->
     {{ CSS.push('less/app.less') }}
+    {{ CSS.push('less/1910.less') }}
     {% block extra_css %}{% endblock extra_css %}
     {{ CSS.render('css/app.min.css') }}
-
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     {% include '_social_tags.html' %}
 
     {% block extra_head %}
@@ -35,7 +33,7 @@
 
     {% block outer_content %}
 
-    <nav role="navigation">
+    <nav role="navigation" id="nav">
       <a class="wbez-logo" href="https://wbez.org">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="25" viewBox="0 0 673.5 181.6" enable-background="new 0 0 673.5 181.6" xml:space="preserve">
         <g>
@@ -60,40 +58,14 @@
 
     {% block header_content %}
     {% endblock header_content %}
+    
+    <div id="fullpage">
+        {% block content %}
+        {% endblock content %}
+    </div>
 
-    <section id="content">
-        <div class="container">
-            <div class="row">
-                <div id="main-content" class="col-md-8">
-                    {% block content %}
-                    <h1>{{ project_name }}</h1>
-                    App content goes here.
-
-                    <i class="icon icon-play"></i>
-                    {% endblock content %}
-                </div>
-
-            </div>
-            {% block wide_content %}
-            {% endblock wide_content %}
-        </div>
-    </section>
-
-    <footer>
-        <div class="primary">
-            <ul>
-
-            </ul>
-        </div>
-        <div class="secondary">
-            <p>&copy;2015 WBEZ</p>
-            <ul>
-                <li id="footerContact"><a href="http://www.wbez.org/contact">Contact</a></li>
-                <li id="footerContact"><a href="https://www.chicagopublicmedia.org/page/privacy-policy">Privacy Policy</a></li>
-                <li id="footerContact"><a href="https://www.chicagopublicmedia.org/give/support-wbez-0">Donate</a></li>
-            </ul>
-        </div>
-    </footer>
+    {% block wide_content %}
+    {% endblock wide_content %}
 
     {% endblock outer_content %}
 
@@ -107,6 +79,7 @@
     {{ JS.push('js/lib/bootstrap.js') }}
     {{ JS.push('js/lib/moment.js') }}
     {{ JS.push('js/lib/ZeroClipboard.js') }}
+    {{ JS.push('js/lib/jquery.fullPage.js') }}
 
     {# uncomment both files to use simpleStorage #}
     {# {{ JS.push('js/lib/simpleStorage.js') }} #}
@@ -117,9 +90,7 @@
     {% endif %}
 
     {{ JS.push('js/copy.js') }}
-    {{ JS.push('js/console.js') }}
     {{ JS.push('js/templates.js') }}
-    {{ JS.push('js/comments.js') }}
     {{ JS.push('js/share.js') }}
     {{ JS.push('js/app.js') }}
     {% block extra_foot_js %}{% endblock extra_foot_js %}

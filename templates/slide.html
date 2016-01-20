@@ -1,0 +1,23 @@
+<div class="slide {{row.id}} postcard" data-anchor="{{row.id}}" style="background-image: url(assets/{{row.frontimage}})">
+
+	<div class="front active-side" data-background="{{row.frontimage}}">
+		<h1>{{row.title}} front</h1>
+	</div>
+
+	<div class="back container" data-background="{{row.backimage}}">
+		<h1>{{row.title}} back</h1>
+		<div class="row backtext">
+			<div class="avatars">
+				<img src="assets/{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" >					
+			</div>
+			<div class="">
+				{{row.backtext}}
+			</div>
+		</div>
+	</div>
+	<div class="postcard-controls">
+		<div class="btn btn-info return" role="button">pick a new person</div>
+		<div class="btn btn-info flip" role="button">flip</div>
+	</div>
+
+</div>

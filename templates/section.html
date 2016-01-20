@@ -1,0 +1,6 @@
+<div class="section" data-anchor="{{row.id}}">
+	{% set name = 'sections' %}
+	{% for row in COPY[row.id] %}
+        {% include "%s.html" % (row.template) ignore missing %}
+    {% endfor %}
+</div>
