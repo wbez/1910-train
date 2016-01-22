@@ -1,41 +1,37 @@
 <div class="slide {{row.id}} postcard" data-anchor="{{row.id}}" style="background-image: url({{row.frontimage}})">
 
 	<div class="front active-side" data-background="{{row.frontimage}}">
-
-			<div class="avatars">
-				<img src="{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" ></img>
-				<div class="btn btn-info return" role="button">Swap persona</div>					
-			</div>
-		
-		<div class="row fronttext"><div class="row title">
-{{row.title}}</div>
-{{row.fronttext}}<br><br>
-<center><div class="btn btn-info flip" role="button">Flip postcard</div></center>
-</div>
-		
 		<div class="avatars">
-				<img src="{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" >
-				<div class="btn btn-info return" role="button">Swap persona</div>					
-			</div>
+			<img src="{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" ></img>
+			<div class="text-center">
+				<div class="btn btn-info return" role="button">Swap persona</div>
+			</div>					
+		</div>
 		
-		
-	</div>
-
-	<div class="back container" data-background="{{row.backimage}}">
-
-			<div class="avatars">
-				<img src="{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" >
-				<div class="btn btn-info return" role="button">Swap persona</div>					
-			</div>
-		
-		<div class="row backtext">
-			
-			<div class="">
-				{{row.backtext}}<br><br>
-<center><div class="btn btn-info flip" role="button">Flip postcard</div></center>
+		<div class="row fronttext col-md-5 col-md-offset-6 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+			<div class="title">{{row.title}}</div>
+			<div class="textbox">{{row.fronttext}}</div>
+			<div class="text-center">
+				<div class="btn btn-info flip" role="button">Flip postcard</div>
 			</div>
 		</div>
 	</div>
-	
 
+	<div class="back container" data-background="{{row.backimage}}">
+		<div class="avatars">
+			<img src="{{row.avatar}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" ></img>
+			<div class="text-center">
+				<div class="btn btn-info return" role="button">Swap persona</div>
+			</div>					
+		</div>
+		
+		<div class="row backtext">
+			<div class="textbox">
+				{{row.backtext}}
+				<div class="text-center">
+					<div class="btn btn-info flip" role="button">Flip postcard</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
