@@ -1,5 +1,7 @@
 <div class="section container-fluid" data-anchor="{{row.id}}">
-	<div class="slide {{row.id}} text-center">
+
+
+	<div class="slide {{row.id}} text-center" style="background-image: url({{row.image}})">
 		<div class="persona-wrapper row">
 			{% for row in COPY.personas %}
 				<div class="persona {{row.id}} col-md-3 col-sm-6">
@@ -8,7 +10,7 @@
 					<p>
 						{{row.about}}
 					</p>
-					<div class="btn btn-info {{row.id}}-start" role="button">start your tour!</div>
+					<div class="btn btn-info {{row.id}}-start" role="button">Start your tour</div>
 				</div>
 			{% endfor %}
 		</div>

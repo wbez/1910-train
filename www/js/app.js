@@ -92,7 +92,7 @@ $(document).ready(function() {
         $slide.find('.front').toggleClass('active-side');
         $slide.find('.back').toggleClass('active-side');
         var bg = $slide.find('.active-side').data('background');
-        $slide.css('background-image','url(assets/'+bg+')');
+        $slide.css('background-image','url('+bg+')');
         console.log($slide)
     });
 
