@@ -4,7 +4,7 @@
 	<div class="slide {{row.id}} text-center" style="background-image: url({{row.image}})">
 		<div class="persona-wrapper row">
 			{% for row in COPY.personas %}
-				<div class="persona {{row.id}} col-md-3 col-sm-6">
+				<div class="persona {{row.id}} col-md-3 col-sm-6 center-block">
 					<img src="{{row.image}}" alt="picture of {{row.name}}" class="img-responsive img-rounded" >
 					<h3>{{row.name}}</h3>
 					<p>
@@ -12,6 +12,9 @@
 					</p>
 					<div class="btn btn-info {{row.id}}-start" role="button">Start your tour</div>
 				</div>
+				{% if loop.index == 2 %}
+				<div class="clearfix visible-sm"></div>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>
