@@ -24,6 +24,19 @@ a {
 	color: #af2251;
 }
 
+.start-container {
+	border-radius: 5px;
+	@media (max-width: 768px) {
+		position: relative;
+		top:10vh;
+		width:90vw;
+		height:90vh;
+		overflow-y: auto;
+		padding-bottom: 12vh;
+		background-color: rgba(51,51,51,0.8);
+	}
+}
+
 .main-title {
 	font-family: 'Libre Baskerville', serif;
 	width:40%;
@@ -31,58 +44,54 @@ a {
 	margin-left: 50%;
 	margin-right: 20%;
 	text-align: left;
+	text-shadow: 2px 2px 3px rgba(100, 100, 100, 1);
 
 	@media (max-width: 768px) {
 		padding: 10px;
-		margin-left: 2%;
-		margin-top: 2%;
-	color: #fff;
-	background-color: rgba(51,51,51,0.8);
+		margin:auto;
+		color: #fff;
 		width:90%;
-
+		font-size: 2em;
+		text-shadow: 1px 1px 2px rgba(200, 200, 200, 1);
 	}
 }
 
 .subhead {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Source Sans Pro', serif;
 	font-size: 20px;
+	line-height: 30px;
 	width:40%;
 	margin-left: 50%;
-	
 	text-align: left;
 
 	@media (max-width: 768px) {
 		padding: 10px;
-		margin-left: 2%;
+		margin:auto;
 		color: #fff;
-	font-size: 14px;
+		font-size: 16px;
 		width:90%;
 	}
 }
 
-.note 	{
-
-font-family: 'Libre Baskerville', serif;
+.note {
+	font-family: 'Source Sans Pro', serif;
 	font-size: 16px;
 	width:40%;
-	
 	margin-left: 50%;
-	
 	text-align: left;
-
 
 	@media (max-width: 768px) {
 		padding: 10px;
-		margin-left: 2%;
+		margin:auto;
 		color: #fff;
-font-size: 10px;
+		font-size: 14px;
 		width:90%;
 	}
 }
 
 .byline {
 
-font-family: 'Libre Baskerville', serif;
+	font-family: 'Libre Baskerville', serif;
 	font-size: 16px;
 	width:40%;
 	margin-top: 1%;
@@ -90,13 +99,12 @@ font-family: 'Libre Baskerville', serif;
 	margin-right: 20%;
 	text-align: left;
 
-
 	@media (max-width: 768px) {
 		padding: 10px;
-		margin-left: 2%;
+		margin:auto;
 		width:90%;
 		color: #fff;
-		font-size: 10px;
+		font-size: 12px;
 	
 	}
 
@@ -108,9 +116,7 @@ font-family: 'Libre Baskerville', serif;
 	margin-bottom: 1%;
 
 	@media (max-width: 768px) {
-		
-		margin-left: 5%;
-		width:50%;
+		margin:auto;
 	}
 }
 
@@ -136,6 +142,9 @@ font-family: 'Libre Baskerville', serif;
 	padding: 0px 20px;
 	overflow-y: auto;
 	height: 99vh;
+	@media (max-width: 768px) {
+		padding-bottom: 7vh;
+	}
 }
 
 .persona {
@@ -151,7 +160,6 @@ font-family: 'Libre Baskerville', serif;
 	display: block;
 	overflow: hidden;
 	
-
 	.slides {
         height: 100%;
         overflow: hidden;
@@ -188,9 +196,8 @@ font-family: 'Libre Baskerville', serif;
 	font-size: 40px;
 	text-align: center;
 	@media (max-width: 768px) {
-		margin-left: 10px;
-		font-size: 22px;
-		
+		margin-left: 10vh;
+		font-size: 22px;		
 	}
 }
 
@@ -199,7 +206,7 @@ font-family: 'Libre Baskerville', serif;
 	font-size: 22px;
 	text-align: center;
 	@media (max-width: 768px) {
-		margin-left: 10px;
+		margin-left: 10vh;
 		font-size: 16px;
 		
 	}
@@ -213,12 +220,21 @@ font-family: 'Libre Baskerville', serif;
 	background-color: rgba(51,51,51,0.8);
 	padding: 15px;
 	font-size: 18px;
+	border-radius: 5px;
+
 	@media (max-width: 768px) {
-		padding: 10px;
-		overflow-y: scroll;
-		height: 400px;
-		margin-left: 5%;
-		margin-top: 28%;
+		padding-bottom: 14vh;
+	}
+
+	.textbox {
+		@media (max-width: 768px) {
+		}
+	}
+}
+
+.front-header {
+	@media (max-width: 768px) {
+		min-height: 12vh;
 	}
 }
 
@@ -237,7 +253,6 @@ font-family: 'Libre Baskerville', serif;
 }
 
 .backtext {
-
 	position: relative;
 	height:60vh;
 	width:70vw;
@@ -250,6 +265,12 @@ font-family: 'Libre Baskerville', serif;
 	padding:10px;
 	border-radius: 5px;
 	font-size: 20px;
+	
+	@media (max-width: 768px) {
+		padding-bottom: 25vh;
+		height:80vh;
+		margin: 20vh auto auto auto;
+	}
 }
 
 .textbox {
@@ -278,30 +299,44 @@ font-family: 'Libre Baskerville', serif;
 	}
 }
 
-
 .gardiner {
 	height: 250px;
 	width: 250px;
 	margin-right: 10px;
 }
 
-
-
-
-
 .creditstext {
 	position: relative;
-	height:600px;
+	height:80vh;
 	width:70%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
 	color:#324741;
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding:10px;
 	border-radius: 5px;
 	font-size: 20px;
-	
 
+	.title {
+		text-align: center;
+		margin-left: 0;
+		font-size: 2em;
+	}
 }
 
+.fp-controlArrow {
+	&.fp-next {
+		@media (max-width: 768px) {
+			right:10px;
+			border-width: 20px 0 20px 18px;
+		}
+	}
+
+	&.fp-prev {
+		@media (max-width: 768px) {
+			left:10px;
+			border-width: 20px 18px 20px 0;
+		}
+	}
+}

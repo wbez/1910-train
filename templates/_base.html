@@ -13,11 +13,11 @@
     {% include '_meta.html' %}
 
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     {{ CSS.push('less/app.less') }}
     {{ CSS.push('less/1910.less') }}
     {% block extra_css %}{% endblock extra_css %}
     {{ CSS.render('css/app.min.css') }}
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     {% include '_social_tags.html' %}
 
     {% block extra_head %}
