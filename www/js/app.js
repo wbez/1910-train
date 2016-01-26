@@ -72,7 +72,7 @@ $(document).ready(function() {
             var leavingSlide = $(this);
             var scrollSpeed = 0;
             console.log(index, nextIndex, direction)
-            if (index == 1) {
+            if (index == 1 & nextIndex != 7) {
                 scrollSpeed = 800;
             }
             $.fn.fullpage.setScrollingSpeed(scrollSpeed);          
@@ -85,6 +85,10 @@ $(document).ready(function() {
 
     $('.return').click(function(){
         $.fn.fullpage.moveTo(2, 0)
+    });
+
+    $('.credits').click(function(){
+        $.fn.fullpage.moveTo(7, 0)
     });
 
     $('.flip').click(function(){
